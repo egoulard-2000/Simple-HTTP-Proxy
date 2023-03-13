@@ -1,0 +1,35 @@
+------------------------------ Normal Tests ------------------------------
+
+GET http://www.google.com/ HTTP/1.0
+
+GET http://amazon.com:59/ HTTP/1.0
+
+
+------------------------------ Cache Tests ------------------------------
+
+GET http://www.google.com:97/proxy/cache/add/amazon.com:90 HTTP/1.0
+
+GET http://www.google.com:97/proxy/cache/add/amazon.com:91 HTTP/1.0
+
+GET http://www.google.com:100/proxy/cache/add/google.com:567 HTTP/1.0
+
+GET http://www.google.com/proxy/cache/remove/amazon.com:89 HTTP/1.0
+
+GET http://www.google.com:97/proxy/cache/remove/amazon.com:90 HTTP/1.0
+
+GET http://www.google.com/proxy/cache/flush HTTP/1.0
+
+
+------------------------------ Blocklist Tests ------------------------------
+
+GET http://www.google.com:97/proxy/blocklist/add/amazon.com:90 HTTP/1.0
+
+GET http://www.google.com:97/proxy/blocklist/add/amazon.com:91 HTTP/1.0
+
+GET http://www.google.com:100/proxy/blocklist/add/google.com:567 HTTP/1.0
+
+GET http://www.google.com/proxy/blocklist/remove/amazon.com:89 HTTP/1.0
+
+GET http://www.google.com:97/proxy/blocklist/remove/amazon.com:90 HTTP/1.0
+
+GET http://www.google.com/proxy/blocklist/flush HTTP/1.0
