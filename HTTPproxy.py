@@ -1,11 +1,7 @@
 
 """
     Name: Emile Goulard
-    uID: u1244855
-    Date: 3/11/2023
-
-    Class: CS4480 - Computer Networks
-    Assignment: PA1-Final
+    Date: 3/12/2023
 
     Summary:
         This Python file acts as an HTTP Proxy to filter Client Requests to the Target Server.
